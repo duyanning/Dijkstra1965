@@ -1,15 +1,19 @@
 #include <iostream>
 #include <thread>
+#include <atomic>
 #include <limits>
 
 using namespace std;
 
 int balance = 0;
 
+//const int TIMES = 100000;
 const int TIMES = 100000;
 
-bool t1, t2;
-int t;
+//bool t1, t2;
+atomic<bool> t1, t2;
+//int t;
+atomic<int> t;
 
 void f1()
 {
